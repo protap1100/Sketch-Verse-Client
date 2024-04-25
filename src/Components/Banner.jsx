@@ -27,7 +27,7 @@ const Banner = () => {
     };
 
     return (
-        <div className="relative my-5">
+  <div className="relative my-5">
     <div className='my-10'>
         <h1 className='font-bold text-3xl text-center' >Welcome to Brushstrokes Gallery</h1>
         <p className='px-5 md:px-40 lg:px-60 text-center my-5'>Explore our collection of exquisite paintings, featuring stunning artworks that bring color and life to any space. Find your perfect masterpiece today!</p>

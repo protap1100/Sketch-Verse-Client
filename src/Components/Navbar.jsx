@@ -32,17 +32,21 @@ const Navbar = () => {
                             isPending ? "pending" : isActive ? "text-blue-600 rounded-xl flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "mr-5 text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600"
                         } >Home
                     </NavLink>
-                    <NavLink to='/userprofile'  className={({ isActive, isPending }) =>
+                    <NavLink to='/allPaint'  className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-blue-600 rounded-xl mt-3 flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600 mt-3"
-                            }>Update Profile
+                            }>All Paint 
+                    </NavLink>
+                    <NavLink to='/addPaint'  className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-blue-600 rounded-xl mt-3 flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600 mt-3"
+                            }>Add Paint
                     </NavLink>
                     <NavLink to='/contact'  className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-blue-600 rounded-xl mt-3 flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600 mt-3"
-                            }>Contact Us
+                            }>Contact
                     </NavLink> 
-                    <NavLink to='/news'  className={({ isActive, isPending }) =>
+                    <NavLink to='/myPaint'  className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-blue-600 rounded-xl mt-3 flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600 mt-3"
-                            }>Estate News
+                            }>MyPaint 
                     </NavLink>  
 
                     </ul>
@@ -55,15 +59,19 @@ const Navbar = () => {
                             isPending ? "pending" : isActive ? "text-blue-600 mr-5 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : "mr-5 text-blue-600 rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
                             }>Home
                     </NavLink>
-                    <NavLink to='/userprofile'  className={({ isActive, isPending }) =>
+                    <NavLink to='/allPaint'  className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-blue-600 mr-5 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : "mr-5 text-blue-600 rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
-                            }>All Art 
+                            }>All Paint 
+                    </NavLink>
+                    <NavLink to='/addPaint'  className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-blue-600 mr-5 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : " mr-5 text-blue-600 rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
+                            }>Add Paint
                     </NavLink>
                     <NavLink to='/contact'  className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-blue-600 mr-5 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : " mr-5 text-blue-600 rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
-                            }>Add Cart
+                            }>Contact
                     </NavLink>
-                    <NavLink to='/news'  className={({ isActive, isPending }) =>
+                    <NavLink to='/myPaint'  className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-blue-600 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : " text-blue-600  rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
                             }>My Cart
                     </NavLink>
