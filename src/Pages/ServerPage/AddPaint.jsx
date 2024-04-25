@@ -1,9 +1,29 @@
 const AddPaint = () => {
+
+    const handleAddPaint = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const category = form.category.value;
+        const description = form.description.value;
+        const price = form.price.value;
+        const rating = form.Rating.value;
+        const customization = form.Customization.value;
+        const processTime = form.process.value;
+        const stockStatus = form.stockStatus.value;
+        const email = form.email.value;
+        const username = form.username.value;
+        const image = form.image.value;
+
+        console.log( name,category,description,price,rating,customization,processTime,stockStatus,email,username,image);
+    }
+
+
     return (
         <div className="my-10">
             <h1 className="text-center text-3xl font-bold text-orange-400">Add Paint Or Drawing Here</h1>
             <div className="my-4">
-                <form onClick={()=>{console.log('hello world')}} className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+                <form onSubmit={handleAddPaint} className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
                     <div className="flex lg:flex-row flex-col gap-5">
                         <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
                             <span className="mb-1">Paint Or Art Name</span>
@@ -11,7 +31,7 @@ const AddPaint = () => {
                         </label>
                         <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
                             <span className="mb-1">Sub Category Name</span>
-                            <input type="email" name="category" placeholder="Sub Category Name" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
+                            <input type="text" name="category" placeholder="Sub Category Name" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
                         </label>
                     </div>
                     <div className="flex lg:flex-row flex-col gap-5">
@@ -21,7 +41,7 @@ const AddPaint = () => {
                         </label>
                         <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
                             <span className="mb-1">Price</span>
-                            <input type="email" name="price" placeholder="Price" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
+                            <input type="text" name="price" placeholder="Price" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
                         </label>
                     </div>
                     <div className="flex lg:flex-row flex-col gap-5">
@@ -31,7 +51,7 @@ const AddPaint = () => {
                         </label>
                         <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
                             <span className="mb-1">Customization</span>
-                            <input type="email" name="Customization" placeholder="Customization" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
+                            <input type="text" name="Customization" placeholder="Customization" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
                         </label>
                     </div>
                     <div className="flex lg:flex-row flex-col gap-5">
@@ -41,17 +61,17 @@ const AddPaint = () => {
                         </label>
                         <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
                             <span className="mb-1">Stock Status</span>
-                            <input type="email" name="stockStatus" placeholder="Stock Status" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
+                            <input type="text" name="stockStatus" placeholder="Stock Status" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
                         </label>
                     </div>
                     <div className="flex lg:flex-row flex-col gap-5">
                         <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
-                            <span className="mb-1">User Email</span>
+                            <span className="mb-1">User email</span>
                             <input type="text" name="email" placeholder="User Email" required className="block w-full h-10 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100" />
                         </label>
                         <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
                             <span className="mb-1">User Name</span>
-                            <input type="email" name="username" placeholder="User Name" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
+                            <input type="text" name="username" placeholder="User Name" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
                         </label>
                     </div>
                     <div className="flex lg:flex-row flex-col gap-5">
