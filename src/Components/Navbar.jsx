@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvier";
+import { FaAlignJustify } from "react-icons/fa";
 
 const Navbar = () => {
 
     const {user,logOut} = useContext(AuthContext);
+
 
     const handleSignOut = () =>{
         logOut()
@@ -16,9 +18,17 @@ const Navbar = () => {
         }))
     }
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+    };
+
+
     // console.log(user.photoURL)
     // const navLink = <>
     //         </>
+
     return (
         <div>
             <div className="navbar font-Poppins bg-green-200 rounded-xl">
@@ -77,16 +87,51 @@ const Navbar = () => {
                     </NavLink>
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end flex gap-5">
                 <div className="w-10 rounded-full tooltip" data-tip={user?.displayName? user.displayName : 'No Username Available'}>
                     {
                         user ? <img className="rounded-full" src={user.photoURL || 'No Photo Url'}/>  : ''
                     }
                 </div>
-                   {
-                        user ?  <Link onClick={handleSignOut} className="ml-5 btn btn-primary border-btn-border  bg-btn" >Logout</Link> :
-                        <Link className="ml-5 btn btn-primary border-btn-border  bg-btn" to='/login'>Login</Link>
-                    }
+                <div className="relative">
+                        <button
+                            onClick={toggleDropdown}
+                            className="px-4 py-2 rounded-md bg-gray-200 text-gray-800 hover:bg-gray-300 focus:outline-none focus:bg-gray-300"
+                        >
+                            {<FaAlignJustify></FaAlignJustify>}
+                        </button>
+                        {isOpen && (
+                            <div className="absolute mt-1  bg-white shadow-md rounded-md">
+                                <div className="py-1">
+                                    {user ? (
+                                        <>
+                                            <Link
+                                                to="/updateProfile"
+                                                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                                                onClick={toggleDropdown}
+                                            >
+                                                Profile
+                                            </Link>
+                                            <button
+                                                onClick={handleSignOut}
+                                                className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100"
+                                            >
+                                                Logout
+                                            </button>
+                                        </>
+                                            ) : (
+                                        <Link
+                                            to="/login"
+                                            className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                                            onClick={toggleDropdown}
+                                        >
+                                            Login
+                                        </Link>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+        </div>
                 </div>
                 </div>
         </div>

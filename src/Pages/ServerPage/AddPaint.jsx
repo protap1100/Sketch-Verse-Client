@@ -1,5 +1,21 @@
+import Swal from "sweetalert2";
+import { AuthContext } from "../../AuthProvider/AuthProvier";
+import { useContext } from "react";
+
 const AddPaint = () => {
 
+    const {user} = useContext(AuthContext);
+
+    // console.log(user,loading)
+    // console.log(user) 
+    // const {email,displayName} = user;
+    // console.log(email,displayName)
+    // if(loading){
+    //     return <div className="flex justify-center items-center my-40">
+    //        <span className="text-accent loading text-center loading-spinner loading-lg"></span>
+    //     </div>
+    //   }
+    
     const handleAddPaint = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -15,9 +31,28 @@ const AddPaint = () => {
         const username = form.username.value;
         const image = form.image.value;
 
-        console.log( name,category,description,price,rating,customization,processTime,stockStatus,email,username,image);
+        const paint = { name,category,description,price,rating,customization,processTime,stockStatus,email,username,image}
+        // console.log(paint)
+        
+        fetch('http://localhost:5000/Paint',{
+            method: 'POST',
+            headers : {
+                'content-type' : 'application/json',
+            },
+            body: JSON.stringify(paint)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    title: "Good job!",
+                    text: "Your Paint have added",
+                    icon: "success"
+                  });
+            }
+        })
     }
-
 
     return (
         <div className="my-10">
@@ -67,11 +102,11 @@ const AddPaint = () => {
                     <div className="flex lg:flex-row flex-col gap-5">
                         <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
                             <span className="mb-1">User email</span>
-                            <input type="text" name="email" placeholder="User Email" required className="block w-full h-10 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100" />
+                            <input type="text" name="email" placeholder="User Email" required className="block w-full h-10 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  defaultValue={user?.email ? user.email : ""} />
                         </label>
                         <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
                             <span className="mb-1">User Name</span>
-                            <input type="text" name="username" placeholder="User Name" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
+                            <input type="text" name="username" placeholder="User Name" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100" readOnly defaultValue={user.displayName}  />
                         </label>
                     </div>
                     <div className="flex lg:flex-row flex-col gap-5">

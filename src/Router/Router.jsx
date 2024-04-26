@@ -8,6 +8,8 @@ import ContactUs from "../Pages/Contact";
 import AddPaint from "../Pages/ServerPage/AddPaint";
 import AllPaint from "../Pages/ServerPage/AllPaint";
 import MyPaint from "../Pages/ServerPage/MyPaint";
+import UpdateProfile from "../Pages/UpdateProfile";
+import PrivateRoute from "../PrivateRoute/PrivateRoute"
 
 export const router = createBrowserRouter([
     {
@@ -28,20 +30,25 @@ export const router = createBrowserRouter([
           element : <Register></Register>
         },
         {
+          path:'/updateProfile',
+          element : <PrivateRoute> <UpdateProfile></UpdateProfile></PrivateRoute>
+        },
+        {
           path:'/contact',
-          element : <ContactUs></ContactUs>
+          element :  <PrivateRoute> <ContactUs></ContactUs></PrivateRoute>
         },
         {
           path: '/addPaint',
-          element : <AddPaint></AddPaint>
+          element : <PrivateRoute><AddPaint></AddPaint></PrivateRoute>
         },
         {
           path: '/allPaint',
-          element : <AllPaint></AllPaint>
+          element : <PrivateRoute><AllPaint></AllPaint></PrivateRoute>,
+          loader : () => fetch('http://localhost:5000/allPaint')
         },
         {
           path: '/myPaint',
-          element : <MyPaint></MyPaint>
+          element : <PrivateRoute><MyPaint></MyPaint></PrivateRoute>
         }
       ]
     },
