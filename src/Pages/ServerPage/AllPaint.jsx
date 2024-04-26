@@ -9,7 +9,7 @@ const AllPaint = () => {
         <div>
             <h1 className="text-3xl font-bold text-center my-10 text-rose-400">All Paint:{allPaint.length} </h1>
                 {/* // allPaint.map(paint => <PaintCard key={paint._id} paint={paint} ></PaintCard>) */}
-             <div  className="rounded-lg overflow-hidden shadow-md p-4">
+             <div  className="rounded-lg bg-gray-200 overflow-hidden shadow-md p-4">
              <div className="overflow-x-auto">
                 <table className="w-full">
                     <tbody>
@@ -26,7 +26,9 @@ const AllPaint = () => {
                     </tbody>
                 </table>
              </div>
-            <Link to="/addPaint" className="btn border-btn-border  bg-btn text-white">Add Paint </Link>
+            </div>
+            <div className="flex my-5 justify-end">
+                 <Link to="/addPaint" className="btn border-btn-border  bg-btn text-white">Add Paint </Link>
             </div>
         </div>
     );
