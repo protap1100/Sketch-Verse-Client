@@ -34,7 +34,7 @@ const AddPaint = () => {
         const paint = { name,category,description,price,rating,customization,processTime,stockStatus,email,username,image}
         // console.log(paint)
         
-        fetch('http://localhost:5000/Paint',{
+        fetch('http://localhost:5000/allPaint',{
             method: 'POST',
             headers : {
                 'content-type' : 'application/json',
