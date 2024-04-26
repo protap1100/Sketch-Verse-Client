@@ -115,7 +115,7 @@ const AddPaint = () => {
                             <input type="text" name="image" placeholder="Image" required className="block w-full h-10 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100" />
                         </label>
                     </div>
-                    <button type="submit" className="self-center px-8 w-full text-lg bg-[#23be0a] rounded-xl btn text-white  " >Submit</button>
+                    <button type="submit" className="self-center px-8 w-full text-lg bg-[#23be0a] rounded-xl btn text-white" >Add Paint</button>
                 </form>
             </div>
         </div>
