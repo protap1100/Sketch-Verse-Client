@@ -10,6 +10,7 @@ import AllPaint from "../Pages/ServerPage/AllPaint";
 import MyPaint from "../Pages/ServerPage/MyPaint";
 import UpdateProfile from "../Pages/UpdateProfile";
 import PrivateRoute from "../PrivateRoute/PrivateRoute"
+import PaintDetails from "../Components/PaintDetails";
 
 export const router = createBrowserRouter([
     {
@@ -19,7 +20,13 @@ export const router = createBrowserRouter([
       children: [
         {
             index : true,
-            element : <Home></Home>
+            element : <Home></Home>,
+            loader : () => fetch('http://localhost:5000/allHomePaint')
+        },
+        {
+            path: '/paintDetails/:id',
+            element : <PaintDetails></PaintDetails>,
+            loader : ({params}) => fetch(`http://localhost:5000/paintDetails/${params.id}`)
         },
         {
           path: '/login',

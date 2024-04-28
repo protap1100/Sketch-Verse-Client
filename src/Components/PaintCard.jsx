@@ -43,7 +43,7 @@ const PaintCard = ({ paint }) => {
             <td className="p-2">{category}</td>
             <td className="p-2">{email}</td>
             <td className="p-2">{rating}</td>
-            <td><Link to={``} className="btn btn-info  text-white" >Update</Link></td>
+            <td><Link to={``} className="btn btn-info  text-white">Update</Link></td>
             <td><Link onClick={() => handleDelete(_id)} className="btn btn-error text-white ">Delete</Link></td>
         </tr>
     );

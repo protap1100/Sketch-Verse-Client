@@ -64,9 +64,17 @@ const AddPaint = () => {
                             <span className="mb-1">Paint Or Art Name</span>
                             <input type="text" name="name" placeholder="Paint Or Art Name" required className="block w-full h-10 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100" />
                         </label>
-                        <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
+                        <label className="block w-full px-2 lg:px-0 lg:w-1/2">
                             <span className="mb-1">Sub Category Name</span>
-                            <input type="text" name="category" placeholder="Sub Category Name" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
+                            <select name="category" className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100" required>
+                                <option value="">Select Sub Category</option>
+                                <option value="Landscape Painting">Landscape Painting</option>
+                                <option value="Portrait Drawing">Portrait Drawing</option>
+                                <option value="Watercolour Painting">Watercolour Painting</option>
+                                <option value="Oil Painting">Oil Painting</option>
+                                <option value="Charcoal Sketching">Charcoal Sketching</option>
+                                <option value="Cartoon Drawing">Cartoon Drawing</option>
+                            </select>
                         </label>
                     </div>
                     <div className="flex lg:flex-row flex-col gap-5">
@@ -94,9 +102,13 @@ const AddPaint = () => {
                             <span className="mb-1">Processing Time</span>
                             <input type="text" name="process" placeholder="Processing Time" required className="block w-full h-10 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100" />
                         </label>
-                        <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
+                        <label className="block w-full px-2 lg:px-0 lg:w-1/2">
                             <span className="mb-1">Stock Status</span>
-                            <input type="text" name="stockStatus" placeholder="Stock Status" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
+                            <select name="stockStatus" className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100" required>
+                                <option value="">Select Stock Status</option>
+                                <option value="available">Available</option>
+                                <option value="notAvailable">Not Available</option>
+                            </select>
                         </label>
                     </div>
                     <div className="flex lg:flex-row flex-col gap-5">
