@@ -11,6 +11,7 @@ import MyPaint from "../Pages/ServerPage/MyPaint";
 import UpdateProfile from "../Pages/UpdateProfile";
 import PrivateRoute from "../PrivateRoute/PrivateRoute"
 import PaintDetails from "../Components/PaintDetails";
+import UpdatePaint from "../Pages/ServerPage/UpdatePaint";
 
 export const router = createBrowserRouter([
     {
@@ -47,6 +48,11 @@ export const router = createBrowserRouter([
         {
           path: '/addPaint',
           element : <PrivateRoute><AddPaint></AddPaint></PrivateRoute>
+        },
+        {
+          path:'/updatingPaint/:id',
+          element : <UpdatePaint></UpdatePaint>,
+          loader : ({params}) => fetch(`http://localhost:5000/updatingPaint/${params.id}`)
         },
         {
           path: '/allPaint',
