@@ -6,10 +6,8 @@ const PaintDetails = () => {
 
     return (
         <div>
-            h
-            {
-                paintDetails.name
-            }
+                {/* <img src={paintDetails.image} alt="" /> */}
+                  {paintDetails.name}
         </div>
     );
 };

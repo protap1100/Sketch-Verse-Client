@@ -15,6 +15,7 @@ const SinglePaint = ({paint}) => {
     return (
         <div>
             <h1>{name}</h1>
+            <img src={image} className="h-84 w-84 rounded-xl p-2" alt="" />
             {/* <button onClick={()=> handleDetails(_id)} className="btn bg-btn border-btn text-white">View Details</button> */}
             <Link className="btn bg-btn border-btn text-white" to={`/paintDetails/${_id}`}>View Details</Link>
         </div>
