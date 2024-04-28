@@ -9,7 +9,7 @@ const UpdatePaint = () => {
     console.log(user.displayName)
     
     const updatePaint = useLoaderData();
-    const {_id,name,category,description,price,rating,customization,processTime,stockStatus,email,username,image}  = updatePaint;
+    const {_id,name,category,description,price,rating,customization,processTime,stockStatus,image}  = updatePaint;
     
     const handleAddPaint = (event) => {
         event.preventDefault();
