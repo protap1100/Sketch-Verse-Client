@@ -62,7 +62,7 @@ export const router = createBrowserRouter([
         {
           path: '/myPaint',
           element : <PrivateRoute><MyPaint></MyPaint></PrivateRoute>
-        }
+        },
       ]
     },
   ]);

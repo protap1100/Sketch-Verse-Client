@@ -8,7 +8,7 @@ const Navbar = () => {
     const {user,logOut} = useContext(AuthContext);
     
     // console.log(user.photoURL)
-    console.log(user)
+    // console.log(user)
 
     const handleSignOut = () =>{
         logOut()
@@ -30,7 +30,7 @@ const Navbar = () => {
     // console.log(user.photoURL)
     // const navLink = <>
     //         </>
-
+    // const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
     return (
         <div>
             <div className="navbar font-Poppins bg-green-200 rounded-xl">

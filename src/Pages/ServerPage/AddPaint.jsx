@@ -114,7 +114,7 @@ const AddPaint = () => {
                     <div className="flex lg:flex-row flex-col gap-5">
                         <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
                             <span className="mb-1">User email</span>
-                            <input type="text" name="email" placeholder="User Email" required className="block w-full h-10 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  defaultValue={user?.email ? user.email : ""} />
+                            <input type="text" readOnly name="email" placeholder="User Email" required className="block w-full h-10 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  defaultValue={user?.email ? user.email : ""} />
                         </label>
                         <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
                             <span className="mb-1">User Name</span>

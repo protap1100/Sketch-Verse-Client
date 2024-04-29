@@ -19,8 +19,6 @@ const AllPaint = () => {
                             <td className="font-semibold p-2">Category</td>
                             <td className="font-semibold p-2">Email</td>
                             <td className="font-semibold p-2">Rating</td>
-                            <td className="font-semibold p-2">Update</td>
-                            <td className="font-semibold p-2">Delete</td>
                         </tr>
                         {allPaint.map(paint => <PaintCard key={paint._id} paint={paint}></PaintCard>)}
                     </tbody>
