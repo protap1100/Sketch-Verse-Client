@@ -19,8 +19,9 @@ const AllPaint = () => {
                             <td className="font-semibold p-2">Category</td>
                             <td className="font-semibold p-2">Email</td>
                             <td className="font-semibold p-2">Rating</td>
+                            <td className="font-semibold p-2">View Details</td>
                         </tr>
-                        {allPaint.map(paint => <PaintCard key={paint._id} paint={paint}></PaintCard>)}
+                        {allPaint.slice(0,5).map(paint => <PaintCard key={paint._id} paint={paint}></PaintCard>)}
                     </tbody>
                 </table>
              </div>

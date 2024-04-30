@@ -47,7 +47,7 @@ const MySinglePaint = ({paint}) => {
             <p className="card-text">ProcessTime: {processTime}</p>
             <p className="card-text">Stock Status: {stockStatus}</p>
             <Link to={`/updatingPaint/${_id}`} className="btn btn-info  text-white">Update</Link>
-            <Link className="btn btn-danger" onClick={() => handleDelete(_id)} >Delete</Link>
+            <Link className="btn btn-error text-white" onClick={() => handleDelete(_id)} >Delete</Link>
         </div>
         </div>
     );

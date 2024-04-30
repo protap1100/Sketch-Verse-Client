@@ -63,6 +63,11 @@ export const router = createBrowserRouter([
           path: '/myPaint',
           element : <PrivateRoute><MyPaint></MyPaint></PrivateRoute>
         },
+        // {
+        //   path: '/paintDetails/:id',
+        //   element : <PaintDetails></PaintDetails>,
+        //   loader : ({params}) => fetch(`http://localhost:5000/paintDetails/${params.id}`)
+        // },
       ]
     },
   ]);
