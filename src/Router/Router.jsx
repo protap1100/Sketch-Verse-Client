@@ -23,12 +23,12 @@ export const router = createBrowserRouter([
         {
             index : true,
             element : <Home></Home>,
-            loader : () => fetch('http://localhost:5000/allHomePaint')
+            loader : () => fetch('https://server-site-navy.vercel.app/allHomePaint')
         },
         {
             path: '/paintDetails/:id',
             element : <PaintDetails></PaintDetails>,
-            loader : ({params}) => fetch(`http://localhost:5000/paintDetails/${params.id}`)
+            loader : ({params}) => fetch(`https://server-site-navy.vercel.app/paintDetails/${params.id}`)
         },
         {
           path: '/login',
@@ -53,12 +53,12 @@ export const router = createBrowserRouter([
         {
           path:'/updatingPaint/:id',
           element : <UpdatePaint></UpdatePaint>,
-          loader : ({params}) => fetch(`http://localhost:5000/updatingPaint/${params.id}`)
+          loader : ({params}) => fetch(`https://server-site-navy.vercel.app/updatingPaint/${params.id}`)
         },
         {
           path: '/allPaint',
           element : <AllPaint></AllPaint>,
-          loader : () => fetch('http://localhost:5000/allPaint')
+          loader : () => fetch('https://server-site-navy.vercel.app/allPaint')
         },
         {
           path: '/myPaint',
@@ -67,7 +67,7 @@ export const router = createBrowserRouter([
         {
           path: '/categoryPaint',
           element : <CategoryPaint></CategoryPaint>,
-          loader : () => fetch('http://localhost:5000/categoryPaint')
+          loader : () => fetch('https://server-site-navy.vercel.app/categoryPaint')
         },
       ]
     },

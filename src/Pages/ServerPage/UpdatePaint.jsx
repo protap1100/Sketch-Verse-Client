@@ -30,7 +30,7 @@ const UpdatePaint = () => {
         const paint = { name,category,description,price,rating,customization,processTime,stockStatus,email,username,image}
         console.log(paint)
         
-        fetch(`http://localhost:5000/updatingPaint/${_id}`,{
+        fetch(`https://server-site-navy.vercel.app/updatingPaint/${_id}`,{
             method:'PUT',
             headers: {
                 'content-type': 'application/json'

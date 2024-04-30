@@ -37,7 +37,7 @@ const AddPaint = () => {
         const paint = { name,category,description,price,rating,customization,processTime,stockStatus,email,username,image}
         // console.log(paint)
         
-        fetch('http://localhost:5000/allPaint',{
+        fetch('https://server-site-navy.vercel.app/allPaint',{
             method: 'POST',
             headers : {
                 'content-type' : 'application/json',

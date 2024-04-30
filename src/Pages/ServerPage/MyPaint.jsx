@@ -9,13 +9,13 @@ const MyPaint = () => {
   const [paintData, setPaintData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myPaint/${email}`)
+    fetch(`https://server-site-navy.vercel.app/myPaint/${email}`)
       .then(res => res.json())
       .then(data => setPaintData(data));
   }, []);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/allPaint/${id}`, {
+    fetch(`https://server-site-navy.vercel.app/allPaint/${id}`, {
       method: 'DELETE',
     })
       .then(res => res.json())
