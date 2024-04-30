@@ -12,6 +12,7 @@ import UpdateProfile from "../Pages/UpdateProfile";
 import PrivateRoute from "../PrivateRoute/PrivateRoute"
 import PaintDetails from "../Components/PaintDetails";
 import UpdatePaint from "../Pages/ServerPage/UpdatePaint";
+import CategoryPaint from "../Pages/ServerPage/CategoryPaint";
 
 export const router = createBrowserRouter([
     {
@@ -62,6 +63,11 @@ export const router = createBrowserRouter([
         {
           path: '/myPaint',
           element : <PrivateRoute><MyPaint></MyPaint></PrivateRoute>
+        },
+        {
+          path: '/categoryPaint',
+          element : <CategoryPaint></CategoryPaint>,
+          loader : () => fetch('http://localhost:5000/categoryPaint')
         },
       ]
     },

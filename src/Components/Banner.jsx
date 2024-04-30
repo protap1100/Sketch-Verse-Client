@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import { useTypewriter} from 'react-simple-typewriter'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -9,9 +9,9 @@ import  SwiperCore from 'swiper';
 import 'swiper/swiper-bundle.css'; 
 import { useState } from 'react';
 import image1 from '../assets/images/banner-img/image1.jpg';
-import image2 from '../assets/images/banner-img/image2.jpeg';
-import image3 from '../assets/images/banner-img/image3.jpg';
-import image4 from '../assets/images/banner-img/image4.jpeg';
+import image2 from '../assets/images/banner-img/image2.jpg';
+import image3 from '../assets/images/banner-img/image3.jpeg';
+import image4 from '../assets/images/banner-img/image4.jpg';
 import 'animate.css';
 SwiperCore.use([Navigation]);
 const Banner = () => {

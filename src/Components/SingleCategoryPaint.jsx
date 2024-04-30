@@ -1,10 +1,9 @@
 import Aos from "aos";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 
-const SinglePaint = ({paint}) => {
+const SingleCategoryPaint = ({paint}) => {
 
-    const {_id,name,category,price,image} = paint;
+    const {subcategory_name,category_name,item_name,image,price,rating} = paint;
 
     useEffect(() => {
         Aos.init({
@@ -17,13 +16,14 @@ const SinglePaint = ({paint}) => {
 
     return (
         <div className="animate__animated animate__fadeInLeft">
-            <h1 className="text-2xl font-bold ">{name}</h1>
+            <h1 className="text-2xl font-bold ">{item_name}</h1>
             <img src={image} className="h-96 w-96 rounded-xl p-2" alt="" />
-            <p className="my-2">Category:{category}</p>
+            <p>Subcategory name:{subcategory_name}</p>
+            <p>Rating:{rating}</p>
+            <p className="my-2">Category:{category_name}</p>
             <p className="my-2">Price:{price}</p>
-            <Link className="btn bg-btn border-btn text-white" to={`/paintDetails/${_id}`}>View Details</Link>
         </div>
     );
 };
 
-export default SinglePaint;
+export default SingleCategoryPaint;

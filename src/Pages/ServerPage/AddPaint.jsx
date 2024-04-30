@@ -1,10 +1,12 @@
 import Swal from "sweetalert2";
 import { AuthContext } from "../../AuthProvider/AuthProvier";
 import { useContext } from "react";
+import { Navigate,useLocation } from 'react-router-dom';
 
 const AddPaint = () => {
 
     const {user} = useContext(AuthContext);
+    const location = useLocation();
 
     // console.log(user,loading)
     // console.log(user) 
@@ -50,6 +52,7 @@ const AddPaint = () => {
                     text: "Your Paint have added",
                     icon: "success"
                   });
+                <Navigate state={location.pathname} to='/allPaint'></Navigate>
             }
         })
     }

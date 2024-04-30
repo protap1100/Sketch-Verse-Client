@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvier";
 import { FaAlignJustify } from "react-icons/fa";
+import 'react-tooltip/dist/react-tooltip.css';
+import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
 
@@ -56,6 +58,10 @@ const Navbar = () => {
                             isPending ? "pending" : isActive ? "text-blue-600 rounded-xl mt-3 flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600 mt-3"
                             }>MyPaint
                     </NavLink> 
+                    <NavLink to='/categoryPaint'  className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-blue-600 rounded-xl mt-3 flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600 mt-3"
+                            }>Category
+                    </NavLink> 
                     <NavLink to='/contact'  className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-blue-600 rounded-xl mt-3 flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600 mt-3"
                             }>Contact
@@ -83,6 +89,10 @@ const Navbar = () => {
                             isPending ? "pending" : isActive ? "text-blue-600 mr-5 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : " mr-5 text-blue-600 rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
                             }>MyPaint 
                     </NavLink>
+                    <NavLink to='/categoryPaint'  className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-blue-600 mr-5 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : " mr-5 text-blue-600 rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
+                            }>Category 
+                    </NavLink>
                     <NavLink to='/contact'  className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-blue-600 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : " text-blue-600  rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
                             }>Contact
@@ -90,10 +100,11 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-5">
-                <div className="w-10 rounded-full tooltip" data-tip={user?.displayName? user.displayName : 'No Username Available'}>
+                <div className="w-10 rounded-full tooltip" data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName? user.displayName : 'No Username Available'}>
                     {
                         user ? <img className="rounded-full" src={user.photoURL || 'No Photo Url'}/>  : ''
                     }
+                   <Tooltip id="my-tooltip" />
                 </div>
                 <div className="relative">
                         <button

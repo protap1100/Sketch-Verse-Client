@@ -3,26 +3,43 @@ import { AuthContext } from '../../AuthProvider/AuthProvier';
 import MySinglePaint from './MySinglePaint';
 
 const MyPaint = () => {
-  const {user} = useContext(AuthContext);
-  const {email} = user;
-
-//   console.log(email);
+  const { user } = useContext(AuthContext);
+  const { email } = user;
 
   const [paintData, setPaintData] = useState([]);
 
-//   http://localhost:5173/allPaint/user@example.com
+  useEffect(() => {
+    fetch(`http://localhost:5000/myPaint/${email}`)
+      .then(res => res.json())
+      .then(data => setPaintData(data));
+  }, []);
 
-    useEffect(()=>{
-        fetch(`http://localhost:5000/myPaint/${email}`)
-        .then(res=> res.json())
-        .then(data => setPaintData(data))
-    },[])
+  const handleDelete = (id) => {
+    fetch(`http://localhost:5000/allPaint/${id}`, {
+      method: 'DELETE',
+    })
+      .then(res => res.json())
+      .then(data => {
+        // console.log(data);
+        if (data.deletedCount > 0) {
+          const remainingPaint = paintData.filter(paint => paint._id !== id);
+          setPaintData(remainingPaint);
+        }
+      })
+      .catch(error => {
+        console.error('Error deleting paint:', error);
+      });
+  };
 
   return (
-    <div className='mt-5 grid gap-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
-        {
-            paintData.map(paint => <MySinglePaint key={paint._id} paint={paint}></MySinglePaint>)
-        }
+    <div className='mt-5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
+      {paintData.map(paint => (
+        <MySinglePaint
+          key={paint._id}
+          paint={paint}
+          onDelete={() => handleDelete(paint._id)} 
+        />
+      ))}
     </div>
   );
 };

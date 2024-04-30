@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const TopHeader = () => {
 
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState(localStorage.getItem("theme"));
 
     useEffect(()=>{
         localStorage.setItem('theme',theme);

@@ -15,20 +15,20 @@ const PaintDetails = () => {
                 </div>
                 <div className="w-full md:w-1/2 px-4 py-4 bg-white">
                     <div className="flex justify-between">
-                        <h2 className="text-xl text-gray-800 font-medium mb-3">{name}</h2>
-                        <p className="text-gray-600 text-sm">{category}</p>
+                        <h2 className="text-xl text-gray-800 font-medium mb-3">Name:{name}</h2>
                     </div>
-                    <p className="text-gray-700 text-base">{description}</p>
+                    <p className="text-orange-600 text-xl ">Category: <span className="text-green-500">{category}</span></p>
+                    <p className="text-orange-600 text-base">Description:{description}</p>
                     <div className="flex justify-between items-center mt-4">
-                        <p className="text-gray-700 font-bold text-xl">${price}</p>
+                        <p className="text-gray-700 font-bold text-xl">Price:{price}</p>
                     </div>
                     <div className="mt-4">
-                        <p className="text-gray-600">Customization: {customization}</p>
-                        <p className="text-gray-600">Process Time: {processTime}</p>
-                        <p className="text-gray-600">Stock Status: {stockStatus}</p>
+                        <p className="font-bold text-orange-600">Customization: <span className="font-light text-green-500">{customization}</span></p>
+                        <p className=" text-orange-600">Process Time: <span  className="font-light text-green-500">{processTime}</span> </p>
+                        <p className=" text-orange-600">Stock Status: <span  className="font-light text-green-500">{stockStatus}</span></p>
                     </div>
                     <div className="flex items-center">
-                            <p className="text-gray-600 text-xl ml-1">Rating :{rating}</p>
+                            <p className="text-orange-600 text-xl ml-1">Rating :{rating}</p>
                             <div className="rating">
                                <FaStar></FaStar>
                             </div>
