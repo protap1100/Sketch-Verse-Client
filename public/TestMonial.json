@@ -1,0 +1,83 @@
+[
+    {
+      "estate_id": 1,
+      "name": "Dr. Sanjay Gupta",
+      "location": "City Center, Bangalore",
+      "rating": 5,
+      "description": "A stunning depiction of vibrant landscapes, capturing nature's beauty in every brushstroke. Perfect for adding warmth and elegance to any space.",
+      "review_date": "2024-04-08",
+      "image_url": "https://i.ibb.co/t8bfCwR/man1.jpg"
+    },
+    {
+      "estate_id": 2,
+      "name": "Alisha Patel",
+      "location": "Suburban Area, Ahmedabad",
+      "rating": 4,
+      "description": "Whimsical and enchanting scenes that ignite the imagination. Each painting tells a unique story, inviting viewers to explore and dream.",
+      "review_date": "2024-04-06",
+      "image_url": "https://i.ibb.co/hVjVGyD/women2.jpg"
+    },
+    {
+      "estate_id": 3,
+      "name": "John Smith",
+      "location": "Downtown, Mumbai",
+      "rating": 5,
+      "description": "Bold and captivating abstract compositions that evoke emotion and spark conversation. Elevate your space with modern artistry.",
+      "review_date": "2024-04-04",
+      "image_url": "https://i.ibb.co/NWH86Cz/man2.jpg"
+    },
+    {
+      "estate_id": 4,
+      "name": "Sophia Johnson",
+      "location": "Transport Hub, Delhi",
+      "rating": 4,
+      "description": "Realistic portrayals that capture the essence of life. Immerse yourself in the intricate details and lifelike beauty of these masterpieces.",
+      "review_date": "2024-04-02",
+      "image_url": "https://i.ibb.co/ZN28T06/man3.jpg"
+    },
+    {
+      "estate_id": 5,
+      "name": "Rahul Kapoor",
+      "location": "City Outskirts, Chennai",
+      "rating": 5,
+      "description": "Expressive and dynamic compositions that command attention. Let these bold strokes and vibrant colors ignite your passion for art.",
+      "review_date": "2024-03-30",
+      "image_url": "https://i.ibb.co/f4FYjVt/man4.jpg"
+    },
+    {
+      "estate_id": 6,
+      "name": "Priya Desai",
+      "location": "Art District, Kolkata",
+      "rating": 5,
+      "description": "Surreal and thought-provoking creations that challenge the mind and stir the soul. Experience the magic of imagination with these captivating works.",
+      "review_date": "2024-03-28",
+      "image_url": "https://i.ibb.co/rGJKZQy/women.webp"
+    },
+    {
+      "estate_id": 7,
+      "name": "Suresh Menon",
+      "location": "Suburban Area, Hyderabad",
+      "rating": 4,
+      "description": "Inspiring and uplifting pieces that radiate positivity. Brighten your day with these cheerful and uplifting works of art.",
+      "review_date": "2024-03-26",
+      "image_url": "https://i.ibb.co/Q8KT5yB/man5.jpg"
+    },
+    {
+      "estate_id": 8,
+      "name": "Ananya Singh",
+      "location": "Tech Park, Bangalore",
+      "rating": 4,
+      "description": "Captivating scenes that transport you to another world. Lose yourself in the beauty and wonder of these mesmerizing paintings.",
+      "review_date": "2024-03-24",
+      "image_url": "https://i.ibb.co/9sJBv9n/man6.jpg"
+    },
+    {
+      "estate_id": 9,
+      "name": "Aditya Mehta",
+      "location": "City Center, Mumbai",
+      "rating": 5,
+      "description": "Elegant and sophisticated pieces that exude luxury and refinement. Elevate your space with the timeless elegance of these exquisite paintings.",
+      "review_date": "2024-03-22",
+      "image_url": "https://i.ibb.co/SP7p1sj/image7.jpg"
+    }
+  ]

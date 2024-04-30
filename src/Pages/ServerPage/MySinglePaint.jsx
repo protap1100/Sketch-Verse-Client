@@ -37,7 +37,7 @@ const MySinglePaint = ({paint}) => {
 
     return (
         <div className="card flex flex-col justify-center items-center">
-        <img src={image} className="h-40 w-60 card-img-top rounded" alt={name}/>
+        <img src={image} className="h-40 w-80 card-img-top rounded" alt={name}/>
         <div className="card-body ">
             <h5 className="card-title">{category}</h5>
             <p>Description:{description}</p>

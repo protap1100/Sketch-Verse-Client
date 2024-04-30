@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -26,10 +27,22 @@ const Banner = () => {
         }
     };
 
+    // const {text} = useTypewriter({
+    //     words: ['Painting','Digital Art','Portrait Drawing','Oil Painting'],
+    //     loop : true,
+    // })
+    // console.log(text)
+
+    const [text] = useTypewriter({
+        words: ['Painting','Digital Art','Portrait Drawing','Oil Painting'],
+        loop: true,
+        onLoopDone: () => console.log(`loop completed after 3 runs.`)})
+
     return (
   <div className="relative my-5">
     <div className='my-10'>
         <h1 className='font-bold text-3xl text-center' >Welcome to Brushstrokes Gallery</h1>
+        <h1 className='font-bold text-3xl text-center'>We Offer You: <span className='text-red-600'>{text}</span> </h1>
         <p className='px-5 md:px-40 lg:px-60 text-center my-5'>Explore our collection of exquisite paintings, featuring stunning artworks that bring color and life to any space. Find your perfect masterpiece today!</p>
     </div>
     <Swiper

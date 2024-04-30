@@ -19,7 +19,7 @@ const MyPaint = () => {
     },[])
 
   return (
-    <div className='mt-5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
+    <div className='mt-5 grid gap-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
         {
             paintData.map(paint => <MySinglePaint key={paint._id} paint={paint}></MySinglePaint>)
         }

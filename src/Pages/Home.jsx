@@ -1,6 +1,7 @@
 import AllHomePaint from "../Components/AllHomePaint";
 import Banner from "../Components/Banner";
 import Faq from "../Components/Faq";
+import Testimonial from "../Components/Testimonial";
 
 const Home = () => {
     
@@ -8,6 +9,7 @@ const Home = () => {
         <div className="container mx-auto">
             <Banner></Banner>
             <AllHomePaint></AllHomePaint>
+            <Testimonial></Testimonial>
             <Faq></Faq>
         </div>
     );

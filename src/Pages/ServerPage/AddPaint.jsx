@@ -92,9 +92,13 @@ const AddPaint = () => {
                             <span className="mb-1">Rating</span>
                             <input type="text" name="Rating" placeholder="Rating" required className="block w-full h-10 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100" />
                         </label>
-                        <label className="block   w-full px-2 lg:px-0 lg:w-1/2">
+                        <label className="block w-full px-2 lg:px-0 lg:w-1/2">
                             <span className="mb-1">Customization</span>
-                            <input type="text" name="Customization" placeholder="Customization" required className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100"  />
+                            <select name="Customization" className="block h-10 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 bg-blue-100" required>
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
                         </label>
                     </div>
                     <div className="flex lg:flex-row flex-col gap-5">
