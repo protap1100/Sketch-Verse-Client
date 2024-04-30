@@ -6,6 +6,7 @@ import { Link,useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../AuthProvider/AuthProvier";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
 
@@ -89,10 +90,9 @@ const Register = () => {
 
   return (
     <div className="container mt-10 mx-auto">
-            {/* <Helmet>
-                <link rel="icon" type="image/svg+xml" href="/src/assets/icon/register.png" />
+            <Helmet>
                 <title>Register</title>
-            </Helmet> */}
+            </Helmet>
       <div>
         <h1 className="text-3xl font-bold text-center my-10 animate__animated animate__fadeInDown">Register Here</h1>
       </div>

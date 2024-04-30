@@ -1,12 +1,13 @@
 // import { Helmet } from "react-helmet-async";
 
+import { Helmet } from "react-helmet";
+
 const ContactUs = () => {
     return (
         <div className="mt-5 container mx-auto">
-            {/* <Helmet>
-                <link rel="icon" type="image/svg+xml" href="/src/assets/icon/contact.png" />
+            <Helmet>
                 <title>Contact Us</title>
-            </Helmet> */}
+            </Helmet>
             <h1 className="text-center my-10 font-bold text-3xl text-green-700">Contact Us Form</h1>
             <section className="py-6 mt-5 bg-gray-200 dark:text-gray-900 rounded-xl">
                 <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">

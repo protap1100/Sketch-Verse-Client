@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 // import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../AuthProvider/AuthProvier";
+import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
     const {user,updateUserProfile} = useContext(AuthContext);
@@ -37,10 +38,9 @@ const UpdateProfile = () => {
 
     return (    
         <div className="mt-5 container mx-auto">
-            {/* <Helmet>
-                <link rel="icon" type="image/svg+xml" href="/src/assets/icon/updateprofile.png" />
+            <Helmet>
                 <title>Update Profile</title>
-            </Helmet> */}
+            </Helmet>
             <h1 className="text-center my-5 font-bold text-2xl text-green-400">Update Your Profile Here</h1>
             <div className="border border-black" ></div>
             <div className="flex flex-col justify-center items-center my-10">

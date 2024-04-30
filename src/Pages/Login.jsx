@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import 'animate.css';
 import { AuthContext } from "../AuthProvider/AuthProvier";
+import { Helmet } from "react-helmet";
 
 
 const Login = () => {
@@ -74,10 +75,9 @@ const Login = () => {
 
   return (
     <div className="container mt-10 mx-auto">
-            {/* <Helmet>
-                <link rel="icon" type="image/svg+xml" href="/src/assets/icon/login.jpg" />
+            <Helmet>
                 <title>Login</title>
-            </Helmet> */}
+            </Helmet>
       <div>
         <h1 className="text-3xl font-bold text-center my-10 animate__animated animate__fadeInDown">Login Here</h1>
       </div>

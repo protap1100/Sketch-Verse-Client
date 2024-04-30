@@ -1,6 +1,7 @@
 import { Link} from "react-router-dom";
 import PaintCard from "../../Components/PaintCard";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const AllPaint = () => {
 
@@ -41,6 +42,9 @@ const AllPaint = () => {
             <h1 className="text-3xl font-bold text-center my-10 text-rose-400">All Paint:{allPaint.length} </h1>
                 {/* // allPaint.map(paint => <PaintCard key={paint._id} paint={paint} ></PaintCard>) */}
              <div  className="rounded-lg bg-gray-200 overflow-hidden shadow-md p-4">
+             <Helmet>
+                <title>All Paint</title>
+            </Helmet>
              <div className="overflow-x-auto">
                 <table className="w-full">
                     <tbody>

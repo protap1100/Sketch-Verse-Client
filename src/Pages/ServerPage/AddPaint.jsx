@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../AuthProvider/AuthProvier";
 import { useContext } from "react";
 import { Navigate,useLocation } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 const AddPaint = () => {
 
@@ -60,6 +61,9 @@ const AddPaint = () => {
     return (
         <div className="my-10">
             <h1 className="text-center text-3xl font-bold text-orange-400">Add Paint Or Drawing Here</h1>
+            <Helmet>
+                <title>Add Paint</title>
+            </Helmet>
             <div className="my-4">
                 <form onSubmit={handleAddPaint} className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
                     <div className="flex lg:flex-row flex-col gap-5">
