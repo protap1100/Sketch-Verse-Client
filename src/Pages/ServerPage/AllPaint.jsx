@@ -6,7 +6,8 @@ import { Helmet } from "react-helmet";
 const AllPaint = () => {
 
     // const allPaint = useLoaderData();
-    
+    // const hi = useLocation();
+    // console.log(hi)
     const [loading, setLoading] = useState(true);
     const [allPaint, setAllPaint] = useState(null);
 

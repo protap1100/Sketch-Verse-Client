@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/swiper-bundle.css';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import  SwiperCore from 'swiper';
 import 'swiper/swiper-bundle.css'; 
 import { useState } from 'react';
@@ -13,9 +13,10 @@ import image2 from '../assets/images/banner-img/image2.jpg';
 import image3 from '../assets/images/banner-img/image3.jpeg';
 import image4 from '../assets/images/banner-img/image4.jpg';
 import 'animate.css';
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation,Autoplay]);
 const Banner = () => {
     const [swiper, setSwiper] = useState(null);
+    
     const goNext = () => {
         if (swiper) {
             swiper.slideNext();
@@ -51,6 +52,8 @@ const Banner = () => {
             prevEl: '.swiper-button-prev',
         }}
         onSwiper={setSwiper}
+        autoplay={{ delay: 1000 }}
+                loop={true}
     >
         <SwiperSlide>
             <div className='relative'>

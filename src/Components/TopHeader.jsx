@@ -23,7 +23,7 @@ const TopHeader = () => {
 
     return (
         <div>
-            <div className="bg-gray-800 py-4 ">
+            <div className="bg-TopBackground py-4 ">
                 <div className="flex px-5 justify-between items-center">
                     <div>
                     <Link to='/' > <img className='rounded-xl lg:h-16 lg:w-60 h-8 w-32 ' src={logo} alt="" /></Link>

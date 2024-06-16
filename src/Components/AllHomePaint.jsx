@@ -5,12 +5,6 @@ const AllHomePaint = () => {
 
     const allData = useLoaderData();
 
-    // if(!allData){
-    //     return <div className="flex justify-center items-center my-40">
-    //     <span className="text-accent loading text-center loading-spinner loading-lg"></span>
-    //  </div>
-    // }
-
     return (
         <div>
             <div className='my-10'>
