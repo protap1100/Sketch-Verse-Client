@@ -23,7 +23,6 @@ export const router = createBrowserRouter([
         {
             index : true,
             element : <Home></Home>,
-            loader : () => fetch('https://server-site-navy.vercel.app/allHomePaint')
         },
         {
             path: '/paintDetails/:id',
@@ -58,7 +57,6 @@ export const router = createBrowserRouter([
         {
           path: '/allPaint',
           element : <AllPaint></AllPaint>,
-          loader : () => fetch('https://server-site-navy.vercel.app/allPaint')
         },
         {
           path: '/myPaint',
@@ -67,7 +65,6 @@ export const router = createBrowserRouter([
         {
           path: '/categoryPaint',
           element : <CategoryPaint></CategoryPaint>,
-          loader : () => fetch('https://server-site-navy.vercel.app/categoryPaint')
         },
       ]
     },
