@@ -26,10 +26,10 @@ const UpdateProfile = () => {
 
         updateUserProfile(newDisplayName, newPhotoURL)
             .then(() => {
-                console.log('Profile updated successfully');
+                console.log('Profile Updated Successfully');
             })
             .catch((error) => {
-                console.error('Error updating profile:', error);
+                console.error('Error updating profile Please Try Again', error);
             });
     }
 
