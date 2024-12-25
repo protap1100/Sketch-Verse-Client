@@ -68,7 +68,7 @@ const Login = () => {
     })
     .catch(()=>{
       // console.log(error,'Kaj Hocche na ')
-      toast.error('Wrong Password or Email Please Try again')
+      toast.error('Wrong Password or Email Please Try again with correct email and password')
       // setErrorMessage(error.message)
     })
   }
