@@ -61,7 +61,7 @@ const Login = () => {
     signIn(email,password)
     .then(()=>{
       // console.log(res.user)
-      toast.success('Login SuccessFull');
+      toast.success('You Have Successfully logged in');
       setTimeout(() => {
         navigate(location?.state ? location.state : '/')
       }, 2000);
